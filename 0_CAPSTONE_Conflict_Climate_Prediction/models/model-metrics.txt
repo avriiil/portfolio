@@ -1,0 +1,94 @@
+# Model Metrics
+
+This file lists the final model selected for use in Capstone One: Heated Discussions - Predicting Conflict Intensity using Climate Data
+
+
+Model:
+-----------------
+Lasso Regression Model
+
+
+Input Features:
+-----------------
+
+death_rate: target feature
+PRCP_zone_XXXX_XX:		Mean of Precipitation level measured at nearest of 25 'zone stations' for 5-year interval indicated by XXXX_XX 
+TAVG_zone_XXXX_XX:  		Mean of Average Daily Temperature measured at nearest of 25 'zone stations' for 5-year interval indicated by XXXX_XX 
+TMAX_zone_XXXX_XX: 		Mean of Maximum Daily Temperature measured at nearest of 25 'zone stations' for 5-year interval indicated by XXXX_XX 
+TMIN_zone_XXXX_XX:  		Mean of Minimum Daily Temperature measured at nearest of 25 'zone stations' for 5-year interval indicated by XXXX_XX 
+PRCP_zone_sameyear:  		Mean of Precipitation level measured at nearest of 25 'zone stations' for the year of conflict incident
+TAVG_zone_sameyear:   		Mean of Average Daily Temperature measured at nearest of 25 'zone stations' for the year of conflict incident
+TMAX_zone_sameyear:  		Mean of Maximum Daily Temperature measured at nearest of 25 'zone stations' for the year of conflict incident
+TMIN_zone_sameyear:   		Mean of Minimum Daily Temperature measured at nearest of 25 'zone stations' for the year of conflict incident
+PRCP_change_1973_2019:		Change in yearly mean Precipitation level between 1973 and 2019
+TAVG_change_1973_2019:		Change in yearly mean Average Daily Temperature between 1973 and 2019
+TMAX_change_1973_2019:		Change in yearly mean Maximum Daily Temperature between 1973 and 2019
+TMIN_change_1973_2019:		Change in yearly mean Minimum Daily Temperature between 1973 and 2019
+PRCP_change_1973_sameyear:	Change in yearly mean Precipitation level between 1973 and year of the conflict incident
+TAVG_change_1973_sameyear:	Change in yearly mean Average Daily Temperature between 1973 and year of the conflict incident
+TMAX_change_1973_sameyear:	Change in yearly mean Maximum Daily Temperature between 1973 and year of the conflict incident
+TMIN_change_1973_sameyear:	Change in yearly mean Minimum Daily Temperature between 1973 and year of the conflict incident
+ 
+
+Performance Metrics
+-----------------
+
+R2:	0.00591	
+MAE:	1.99332
+MSE:	16.42520
+
+For comparison, the metrics of the baseline (Dummy Regressor) model are provided below as well:
+
+R2:	-0.00018	
+MAE:	2.00499	
+MSE:	16.57384
+
+As can be seen, for all practical purposes, the selected model performs no better than the baseline Dummy Regressor. 
+
+ 
+Lasso Features Selected:
+-----------------
+ 
+PRCP_change_1973_2019    	0.251133
+TAVG_change_1973_2019    	0.029950
+TMIN_change_1973_2019    	0.003527
+
+Coefficients of the remaining 29 features were set to 0 by the Lasso Regression model.
+ 
+
+Hyperparameter Settings:
+-----------------
+alpha = 0.1
+max_iter = 100
+random_state = 21
+
+Full result from best_Lasso.get_params():
+
+{'memory': None,
+ 'steps': [('simpleimputer', SimpleImputer(strategy='median')),
+  ('standardscaler', StandardScaler()),
+  ('lasso', Lasso(alpha=0.1, max_iter=100, random_state=21))],
+ 'verbose': False,
+ 'simpleimputer': SimpleImputer(strategy='median'),
+ 'standardscaler': StandardScaler(),
+ 'lasso': Lasso(alpha=0.1, max_iter=100, random_state=21),
+ 'simpleimputer__add_indicator': False,
+ 'simpleimputer__copy': True,
+ 'simpleimputer__fill_value': None,
+ 'simpleimputer__missing_values': nan,
+ 'simpleimputer__strategy': 'median',
+ 'simpleimputer__verbose': 0,
+ 'standardscaler__copy': True,
+ 'standardscaler__with_mean': True,
+ 'standardscaler__with_std': True,
+ 'lasso__alpha': 0.1,
+ 'lasso__copy_X': True,
+ 'lasso__fit_intercept': True,
+ 'lasso__max_iter': 100,
+ 'lasso__normalize': False,
+ 'lasso__positive': False,
+ 'lasso__precompute': False,
+ 'lasso__random_state': 21,
+ 'lasso__selection': 'cyclic',
+ 'lasso__tol': 0.0001,
+ 'lasso__warm_start': False}
