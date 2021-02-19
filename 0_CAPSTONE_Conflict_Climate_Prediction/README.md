@@ -3,8 +3,8 @@ capstone-two
 
 This is my first capstone project, exploring relationship between armed conflict and climate change.
 
-Project Organization
-------------
+# Project Organization
+
 
     ├── LICENSE
     ├── Makefile           <- Makefile with commands like `make data` or `make train`
