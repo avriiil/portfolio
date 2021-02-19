@@ -15,6 +15,7 @@ Read [full project report](https://towardsdatascience.com/heated-discussions-pre
 
 Watch [project presentation](https://www.youtube.com/watch?v=2DDwaDBQkg0&ab_channel=RichardPelgrim) on YouTube (20min).
 
+Complete Jupyter Notebooks for each section can be found in the 'notebooks' directory.
 
 ## 1. Data
 
