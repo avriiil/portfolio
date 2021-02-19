@@ -7,9 +7,3 @@ This is my first Capstone Project, completed as part of the Springboard Data Sci
 
 ##  1_ski_resort_price_prediction
 This case study was completed as part of the Springboard Data Science Career Track curriculum. In this project, I investigate the contribution of a ski resort's features (e.g. slope elevation, number of lifts, etc.) to its ticket price, based on comparison to 300+ comparable resorts. A predictive model is built and business recommendations are made.
-
-## 2_app_stores_comparison
-This case study was completed as part of the Springboard Data Science Career Track curriculum. In this project, I use data obtained from Kaggle regarding apps on Play Store and App Store to investigate whether platform impacts app ratings. A predictive model is built and business recommendations are made.
-
-## 3_sql_country_club
-This case study was completed as part of the Springboard Data Science Career Track curriculum. In this project, I use SQL to access a relational database containing data about a country club's members, facilities, and bookings. Through extensive querying, answers to a given list of questions are provided.

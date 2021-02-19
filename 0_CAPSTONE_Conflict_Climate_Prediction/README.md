@@ -1,7 +1,7 @@
 capstone-two
 ==============================
 
-This is my second capstone, exploring relationship between armed conflict and climate change.
+This is my first capstone project, exploring relationship between armed conflict and climate change.
 
 Project Organization
 ------------
