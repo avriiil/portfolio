@@ -19,8 +19,8 @@ Watch [project presentation](https://www.youtube.com/watch?v=2DDwaDBQkg0&ab_chan
 ## 1. Data
 
 This project combines data from two separate sources:
-1. the Uppsala Conflict Data Program Global Armed Conflict dataset containing information on 220k+ conflict incidents between 1989 and 2019, and
-2. the Global Historical Climate Network dataset containing weather measurements from 115k+ stations across the globe between 1889 and 2020.
+1. the [Uppsala Conflict Data Program Global Armed Conflict dataset](https://ucdp.uu.se/downloads/) containing information on 220k+ conflict incidents between 1989 and 2019, and
+2. the [Global Historical Climatology Network Daily](https://www.ncei.noaa.gov/access/metadata/landing-page/bin/iso?id=gov.noaa.ncdc:C00861) dataset containing weather measurements from 115k+ stations across the globe between 1889 and 2020.
 
 The UCDP Armed Conflict features can be categorised as follows:
 * chronological: year, start and end date
