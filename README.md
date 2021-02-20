@@ -13,7 +13,9 @@ This project was completed as part of the Springboard Data Science Career Track.
 See README in the project directory for more information, incl. project outline and key findings.
 
 Read [full project report](https://towardsdatascience.com/heated-discussions-predicting-conflict-intensity-using-climate-data-7084d623f8d2) on Towards Data Science.
+
 Watch [project presentation](https://www.youtube.com/watch?v=2DDwaDBQkg0&ab_channel=RichardPelgrim) on YouTube (20min).
+
 Complete Jupyter Notebooks for each section can be found in the 'notebooks' directory.
 
 
