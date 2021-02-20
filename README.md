@@ -1,9 +1,10 @@
 # Richard Pelgrim's Data Science Portfolio
 
 ## 0_CAPSTONE_Conflict_Climate_Prediction
-![Cover Image](./2_README_files/readme_cover_image_conflict.png)
 
 **To what extent can we predict conflict intensity from climate data?**
+
+![Cover Image](./2_README_files/readme_cover_image_conflict.png)
 
 This is my first Capstone Project entitled *Heated Discussions: Predicting Conflict Intensity Using Climate Data*.
 
