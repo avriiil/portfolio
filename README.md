@@ -1,10 +1,13 @@
 # Richard Pelgrim's Data Science Portfolio
 
-## 0_CAPSTONE_Conflict_Climate_Prediction
+## 0_FINAL_CAPSTONE_Identifying_Political_Misinformation_Twitter
+
+
+## 1_CAPSTONE_Conflict_Climate_Prediction
 
 **To what extent can we predict conflict intensity from climate data?**
 
-![Cover Image](./2_README_files/readme_cover_image_conflict.png)
+![Cover Image](./9_README_files/readme_cover_image_conflict.png)
 
 This is my first Capstone Project entitled *Heated Discussions: Predicting Conflict Intensity Using Climate Data*.
 
@@ -19,6 +22,3 @@ Watch [project presentation](https://www.youtube.com/watch?v=2DDwaDBQkg0&ab_chan
 Complete Jupyter Notebooks for each section can be found in the 'notebooks' directory.
 
 
-
-##  1_ski_resort_price_prediction
-This case study was completed as part of the Springboard Data Science Career Track curriculum. In this project, I investigate the contribution of a ski resort's features (e.g. slope elevation, number of lifts, etc.) to its ticket price, based on comparison to 300+ comparable resorts. A predictive model is built and business recommendations are made.
