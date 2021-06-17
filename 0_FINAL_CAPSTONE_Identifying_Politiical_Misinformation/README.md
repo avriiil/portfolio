@@ -8,6 +8,9 @@ The internet — and social media, especially — is rife with political misinfo
 
 After speaking to several people involved in misinformation and hate speech detection across a range of organisations, I decided to use my final Capstone Project of the Springboard Data Science Career Track to address some of these issues. With this project, I hope to contribute to the ongoing research in this field by looking specifically at the tools and processes necessary to detect political misinformation in Arabic-language tweets.
 
+## Notebook Structure
+The Jupyter notebooks follow the workflow as described below. Additionally, there are 3 auxiliary notebooks (starting with the prefix 99-...) that contain code that executes certain tasks I did not want to include in the main notebooks themselves. When code in these notebooks is essential to the functioning of one of the five main notebooks it will be mentioned in the corresponding notebook.
+
 ## The Dataset
 For this project, I make use of a dataset from Twitter’s [Transparency Center](https://transparency.twitter.com/en/reports/information-operations.html) consisting of 5,350 Twitter accounts (and all of their 36+ million tweets, 95 percent of which are in Arabic) that have been identified by Twitter as being part of state-linked Information Operations.
 
@@ -35,12 +38,16 @@ Which then prepares us for the final step:
 
 ![workflow_2](./readme_files/workflow.png)
 
-## Data Wrangling (see notebook 01-rrp-data-wrangling)
+## Data Wrangling 
+**see notebook 01-rrp-data-wrangling**
+
 Besides the usual NLP data wrangling steps like removing URL’s, emoji, hashtags, repeating characters, etc. this project also involved some pre-processing specific to Arabic NLP. In [this Medium post](https://towardsdatascience.com/arabic-nlp-unique-challenges-and-their-solutions-d99e8a87893d), I provide an in-depth tutorial and explanations as to the particular challenges of working with Arabic text…and how to overcome them using the versatile camel-tools Python package.
 
 After removing all non-Arabic tweets (~3%) and all duplicate content (i.e. re-tweets), we were left with 6.15 million unique Arabic-language tweets.
 
-## Summary Statistics and EDA (see notebook 02-rrp-exploratory-data-analysis)
+## Summary Statistics and EDA 
+**see notebook 02-rrp-exploratory-data-analysis**
+
 Before we move on to looking at what these 6.15 million unique tweets were about, it’s worth mentioning some basic information about the tweeting behaviour in the dataset.
 
 The dataset contains:
@@ -49,8 +56,8 @@ The dataset contains:
 - tweets published between February 15, 2010 and January 22, 2020 (most tweets in 2018 and 2019)
 
 Looking at the distribution of tweets, followers, and followings across users (in the complete 36M dataset), we notice some extremely skewed patterns, for example:
-- # Followers per user: ranging from 0 to 1.2 million, with a median of 100.
-- # Following per user: ranging from 0 to 877k, with a median of 228.
+- Number of followers per user: ranging from 0 to 1.2 million, with a median of 100.
+- Number of following per user: ranging from 0 to 877k, with a median of 228.
 - Top 1% most-followed users produced almost half of the 35M tweets
 - Tweets per user: ranging from 1–1.4 million (~4.2% of the whole dataset) — median: 203
 
@@ -73,7 +80,9 @@ At the end of the **exploratory data analysis**, I could confidently identify 3 
 - Commercial
 - Political
 
-## Topic Modelling (see notebook 03-rrp-topic-modelling)
+## Topic Modelling 
+**see notebook 03-rrp-topic-modelling**
+
 This three-way split was helpful in guiding my work in the next step: moving from the 6.15 million unique tweets to the specifically political content using topic modelling. I used two different topic modelling approaches in order to sift out the political content: **Latent Dirichlet Allocation** (LDA) and **Gibbs Sampling Dirichlet Multinomial Mixture** (GSDMM).
 
 While LDA is by far the most popular topic-modelling approach out there, it assumes multiple topics per document. GSDMM, on the other hand, is built specifically for short-text clustering and assumes only a single topic per document. Seeing as our documents are max. 140 characters long, it seems reasonable to assume that they contain only a single topic.
@@ -96,7 +105,9 @@ Since GSDMM cannot be parallelised as of June 2021, I ended up engineering a wor
 
 ![lda_to_gsdmm](./readme_files/lda-gsdmm-hybrid.png)
 
-## Clustering (see notebook 04-rrp-clustering)
+## Clustering 
+**see notebook 04-rrp-clustering**
+
 The data is now all set for the next envisioned step: using unsupervised learning to break the political tweets down into ‘neutral’ and ‘misinformation’ content specifically.
 
 The idea here was to go beyond looking only at the textual content of the tweets and to add features into the mix that could potentially help distinguish between ‘neutral’ and ‘misinformation’ political content.
@@ -120,6 +131,15 @@ I did manage to run a 5% subsample through a t-SNE clustering, however. That rev
 ![tsne](./readme_files/tsne-topics.png)
 
 A bit of a disappointment, of course; but also a solid lesson in the realistic limitations of a data science project, both technically and practically. I still think that this avenue is worth exploring, though, and am keen to spend more time trying to figure out the ins-and-outs of running these clustering algorithms in distributed clusters and exploring meaningful ways of teasing the two categories (misinformation or not) out.
+
+## Building a ML Classifier 
+**see notebook 05-rrp-classification**
+
+To complete the technical challenge I set for myself, I did build a Dask implementation of an XGBoost classifier in order to predict the GSDMM topic label from all the non-text features we had available. This could prove a useful exercise since the topics were shown to be an effective means of clustering the data. If we could predict the topic from the non-text data, that would save some computationally expensive processing steps in our pipeline.
+
+After running an extensive hyper-parameter search, we found the best model could predict the GSDMM topic label from the non-text features with an **accuracy, precision, recall, and f1-score of ~63%**. While that’s not revolutionary, it's still pretty strong predictive power considering this included nothing of the original tweet content. 
+
+![confusion_matrix](./readme_files/confusion-matrix.png)
 
 ## Key Takeaways
 The project in its current state offers (at least) the following 4 insights:
