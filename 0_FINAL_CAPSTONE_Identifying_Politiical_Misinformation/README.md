@@ -122,13 +122,13 @@ These new features included data on:
 ### Geography of Dialects
 Generating the dialect feature had the interesting side-effect of giving us additional data about the geographical spread of the tweets in this dataset. The map below shows the number of tweets per each of the 26 dialects. The dialects are named according to the major cities in which they’re most commonly used. Of course, a dialect is spoken in a region much larger than a single city. And there’s no guarantee that a person writing in the Lebanese dialect is actually tweeting from Lebanon. So while we should take the map below with a grain (spoonful!) of salt, there’s still some useful information in here about the geography and demographics of the users in this dataset.
 
-![dialect_mapping](./readme_files/dialect-mapping.png)
+![dialect_mapping](./readme_files/dialect_mapping.png)
 
 After engineering the new features, I then tried to run the new dataframe through a number of different clustering algorithms: K-Means, t-SNE, and Hierarchical Clustering. Unfortunately, I ran headfirst into the technical limitations of the libraries I was working with at this point, as well as the time limitations of the project. Because of the size of the dataset (285k rows * 10K+ features), and the inability to parallelise the clustering algorithms effectively, I have not (yet!) been able to run the entire dataset through a meaningful clustering algorithm.
 
 I did manage to run a 5% subsample through a t-SNE clustering, however. That revealed a large number of small clusters which seemed pretty effectively defined by the GSDMM Topic label, as can be seen in the screenshot below.
 
-![tsne](./readme_files/tsne-topics.png)
+![tsne](./readme_files/tsne_topics.png)
 
 A bit of a disappointment, of course; but also a solid lesson in the realistic limitations of a data science project, both technically and practically. I still think that this avenue is worth exploring, though, and am keen to spend more time trying to figure out the ins-and-outs of running these clustering algorithms in distributed clusters and exploring meaningful ways of teasing the two categories (misinformation or not) out.
 
