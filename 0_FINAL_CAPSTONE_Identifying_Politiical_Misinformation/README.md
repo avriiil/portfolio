@@ -8,7 +8,7 @@ The internet — and social media, especially — is rife with political misinfo
 After speaking to several people involved in misinformation and hate speech detection across a range of organisations, I decided to use my final Capstone Project of the Springboard Data Science Career Track to address some of these issues. With this project, I hope to contribute to the ongoing research in this field by looking specifically at the tools and processes necessary to detect political misinformation in Arabic-language tweets.
 
 ## The Data
-For this project, I make use of a dataset from Twitter’s [Transparency Center]9https://transparency.twitter.com/en/reports/information-operations.html) consisting of 5,350 Twitter accounts (and all of their 36+ million tweets, 95 percent of which are in Arabic) that have been identified by Twitter as being part of state-linked Information Operations.
+For this project, I make use of a dataset from Twitter’s [Transparency Center](https://transparency.twitter.com/en/reports/information-operations.html) consisting of 5,350 Twitter accounts (and all of their 36+ million tweets, 95 percent of which are in Arabic) that have been identified by Twitter as being part of state-linked Information Operations.
 
 In Twitter’s own words:
 
@@ -29,7 +29,7 @@ I do this in 3 steps:
 Which then prepares us for the final step:
 4. *Classification*: Using the output to construct an ML classifier.
 
-![workflow_1](./readme_files/approach_flow.png)
+![workflow_1](./readme_files/approach-flow.png)
 
 ![workflow_2](./readme_files/workflow.png)
 
