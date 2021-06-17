@@ -1,4 +1,5 @@
 ![cover_photo](./readme_files/tweets_cover.jpg)
+
 # What the Tweet?! -- Identifying Arabic-Language Political Misinformation on Twitter
 **Using unsupervised NLP topic modelling and clustering to build a machine learning classifier that can identify misinformation in short-text documents.**
 
