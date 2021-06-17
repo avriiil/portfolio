@@ -22,12 +22,13 @@ An important thing to note here is that the accounts were identified as ‘compr
 The goal of the project, then, was to figure out how to boil the 36+ million tweets down to the actual political misinformation content.
 
 I do this in 3 steps:
-1. *Wrangling*: Clean the data to get only the unique tweets.
-2. *Topic Modelling*: Perform NLP-driven categorisation of the unique tweets to sift out all the end-of-the-workday cat memes and other junk and get only the political content.
-3. *Clustering*: Apply unsupervised learning methods to further distinguish between political content and political misinformation.
+1. **Wrangling**: Clean the data to get only the unique tweets.
+2. **Topic Modelling**: Perform NLP-driven categorisation of the unique tweets to sift out all the end-of-the-workday cat memes and other junk and get only the political content.
+3. **Clustering**: Apply unsupervised learning methods to further distinguish between political content and political misinformation.
 
 Which then prepares us for the final step:
-4. *Classification*: Using the output to construct an ML classifier.
+
+4. **Classification**: Using the output to construct an ML classifier.
 
 ![workflow_1](./readme_files/approach-flow.png)
 
