@@ -22,7 +22,7 @@ Complete Jupyter Notebooks for each section can be found in the 'notebooks' dire
 
 ## 1_CAPSTONE_Conflict_Climate_Prediction
 
-**To what extent can we predict conflict intensity from climate data?**
+**Using geospatial analysis and machine learning to predict conflict intensity from climate data.**
 
 ![Cover Image](./9_README_files/readme_cover_image_conflict.png)
 
