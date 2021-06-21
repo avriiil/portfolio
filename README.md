@@ -14,7 +14,7 @@ See README in the project directory for more information, incl. project outline 
 
 Read [full project report](https://richardpelgrim.medium.com/identifying-arabic-language-political-misinformation-on-twitter-3a614c489c00) on Towards Data Science.
 
-Watch [project presentation](XXX) on YouTube (XXmin).
+Watch [project presentation](https://www.youtube.com/watch?v=q6Uh65QODZU) on YouTube (22min).
 
 Complete Jupyter Notebooks for each section can be found in the 'notebooks' directory.
 
